@@ -13,17 +13,20 @@ namespace Futbolmenager2
 {
     public partial class Giriş : Form
     {
+        public static string gidenbilgi = "";
+
         public Giriş()
         {
             InitializeComponent();
            
         }
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        
         private void Giriş_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.UserName!=string.Empty)
             {
-                kullanicigrş.Text = Properties.Settings.Default.UserName;
+                kullanicigrştxt.Text = Properties.Settings.Default.UserName;
                 
             }
         }
@@ -31,43 +34,66 @@ namespace Futbolmenager2
         private void Button1_Click(object sender, EventArgs e)
 
         {
+            gidenbilgi = kullanicigrştxt.Text;
 
-            
-
-            string userName = kullanicigrş.Text;
-            baglanti.Open();
-            SqlCommand check_User_Name = new SqlCommand("SELECT count(*) FROM kullanicilar WHERE kullanici_adi = '"+userName+"' and kullanici_tipi=1", baglanti);
-            check_User_Name.Parameters.AddWithValue("@kullanici_adi", userName);
-            int UserExist = (int)check_User_Name.ExecuteScalar();
-            if (UserExist > 0)
+            try
             {
-              
-                Admin_anasayfa kayıt = new Admin_anasayfa();
-                kayıt.Show();
+                
+                SqlCommand cmd = new SqlCommand("select kullanici_tipi from kullanicilar where kullanici_adi = @KAdi and kullanici_sifre = @KParola", baglanti);
+                cmd.Parameters.AddWithValue("@KAdi", kullanicigrştxt.Text);
+                cmd.Parameters.AddWithValue("@KParola", sifregrştxt.Text);
+                cmd.Connection.Open();
+                SqlDataReader rd = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                if (rd.HasRows) // Girilen K.Adı ve K.Parola Dahilinde Gelen Data var ise 
+                {
+                    while (rd.Read()) // reader Okuyabiliyorsa
+                    {
+                        if (rd["kullanici_tipi"].ToString() == "1") // 1 Rolü Admin'e ait olarak Ayarlanmışdır
+                        {
+                            // Kullanıcı Rolü 1 ise Admin Ekranı Aç 
+                            Admin_anasayfa admin = new Admin_anasayfa();
+                            admin.Show();
+                            this.Hide();
+                           
+                            
 
-                Giriş grş = new Giriş();
-                grş.Close();
-                this.Hide();
+                        }
+                        else
+                        {
+                            // Kullanıcı Rolü 1 dışında ise Kullanıcı Ekranı Aç
+                            KullaniciAnasayfa kul = new KullaniciAnasayfa();
+                            kul.Show();
+                            this.Hide();
+                        }
+                    }
+                }
+                else /// Reader SATIR döndüremiyorsa K.Adı Parola Yanlış Demekdir
+                {
+                    rd.Close();
+                    girishatalbl.Text = "Kullanıcı adı veya Parola geçersizdir! ";
+                }
             }
-            else
+            catch // Bağlantı açamayıp Sorgu Çalıştıramıyorsa Veritabanına Ulaşamıyor Demekdir
             {
-                MessageBox.Show("Admin Değil.");
-                //Üyelik sayfası burada yönelndirilcek
+                MessageBox.Show("DB ye ulaşılamadı", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-        
+
+          
+      
+
 
 
             baglanti.Close();
 
 
-            //select * from kullanicilar where kullanici_adi='furkan.aydogdu' and kullanici_tipi=1 
+            
+    
 
-          
 
             if (BeniHatirla.Checked == true)
             {
-                Properties.Settings.Default.UserName = kullanicigrş.Text;
+                Properties.Settings.Default.UserName = kullanicigrştxt.Text;
               
                 Properties.Settings.Default.Save();
             }

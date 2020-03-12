@@ -14,6 +14,8 @@ C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futb
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.pdb
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.Giriş.resources
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.Kayıt.resources
-C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.Admingiriş.resources
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.şifremiunuttum.resources
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.Admin_anasayfa.resources
+C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.AdminTakımlar.resources
+C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.AdminOyuncular.resources
+C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.KullaniciAnasayfa.resources

@@ -44,10 +44,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kurulustarihlbl = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.kullanıcılbl = new System.Windows.Forms.Label();
             this.sifrelbl = new System.Windows.Forms.Label();
@@ -59,6 +55,8 @@
             this.sifretekrarlbl = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.kullanıcıhatalbl = new System.Windows.Forms.Label();
+            this.kuluphatalbl = new System.Windows.Forms.Label();
+            this.sifrehatalbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -80,7 +78,7 @@
             // kayıtbutton
             // 
             this.kayıtbutton.BackColor = System.Drawing.Color.DarkGray;
-            this.kayıtbutton.Location = new System.Drawing.Point(435, 309);
+            this.kayıtbutton.Location = new System.Drawing.Point(441, 262);
             this.kayıtbutton.Name = "kayıtbutton";
             this.kayıtbutton.Size = new System.Drawing.Size(75, 30);
             this.kayıtbutton.TabIndex = 10;
@@ -188,134 +186,6 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
-            // kurulustarihlbl
-            // 
-            this.kurulustarihlbl.AutoSize = true;
-            this.kurulustarihlbl.Location = new System.Drawing.Point(432, 237);
-            this.kurulustarihlbl.Name = "kurulustarihlbl";
-            this.kurulustarihlbl.Size = new System.Drawing.Size(74, 13);
-            this.kurulustarihlbl.TabIndex = 21;
-            this.kurulustarihlbl.Text = "Kuruluş Tarihi:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Gün",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox1.Location = new System.Drawing.Point(392, 268);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(45, 21);
-            this.comboBox1.TabIndex = 22;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Ay",
-            "Ocak",
-            "Şubat",
-            "Mart",
-            "Nisan",
-            "Mayıs",
-            "Haziran",
-            "Temmuz",
-            "Ağustos",
-            "Eylül",
-            "Ekim",
-            "Kasım",
-            "Aralık"});
-            this.comboBox2.Location = new System.Drawing.Point(453, 268);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(46, 21);
-            this.comboBox2.TabIndex = 23;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "1857",
-            "1858",
-            "1859",
-            "1860",
-            "1861",
-            "1862",
-            "1863",
-            "1864",
-            "1865",
-            "1866",
-            "1867",
-            "1868",
-            "1869",
-            "1870",
-            "1871",
-            "1872",
-            "1873",
-            "1874",
-            "1875",
-            "1876",
-            "1877",
-            "1878",
-            "1879",
-            "1880",
-            "1881",
-            "1882",
-            "1883",
-            "1884",
-            "1885",
-            "1886",
-            "1887",
-            "1888",
-            "1889",
-            "1890",
-            "1891",
-            "1892",
-            "1893",
-            "1894",
-            "1895",
-            "1896",
-            "1897",
-            "1898",
-            "1899",
-            "1900"});
-            this.comboBox3.Location = new System.Drawing.Point(516, 268);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(51, 21);
-            this.comboBox3.TabIndex = 24;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
@@ -406,11 +276,30 @@
             this.kullanıcıhatalbl.Size = new System.Drawing.Size(0, 13);
             this.kullanıcıhatalbl.TabIndex = 39;
             // 
+            // kuluphatalbl
+            // 
+            this.kuluphatalbl.AutoSize = true;
+            this.kuluphatalbl.Location = new System.Drawing.Point(542, 170);
+            this.kuluphatalbl.Name = "kuluphatalbl";
+            this.kuluphatalbl.Size = new System.Drawing.Size(0, 13);
+            this.kuluphatalbl.TabIndex = 40;
+            // 
+            // sifrehatalbl
+            // 
+            this.sifrehatalbl.AutoSize = true;
+            this.sifrehatalbl.ForeColor = System.Drawing.Color.Red;
+            this.sifrehatalbl.Location = new System.Drawing.Point(513, 318);
+            this.sifrehatalbl.Name = "sifrehatalbl";
+            this.sifrehatalbl.Size = new System.Drawing.Size(0, 13);
+            this.sifrehatalbl.TabIndex = 41;
+            // 
             // Kayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 441);
+            this.Controls.Add(this.sifrehatalbl);
+            this.Controls.Add(this.kuluphatalbl);
             this.Controls.Add(this.kullanıcıhatalbl);
             this.Controls.Add(this.sifretekrarlbl);
             this.Controls.Add(this.sifretekrar);
@@ -420,10 +309,6 @@
             this.Controls.Add(this.sifrelbl);
             this.Controls.Add(this.kullanıcılbl);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.kurulustarihlbl);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
@@ -468,10 +353,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label kurulustarihlbl;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label kullanıcılbl;
         private System.Windows.Forms.Label sifrelbl;
@@ -483,6 +364,8 @@
         private System.Windows.Forms.Label sifretekrarlbl;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label kullanıcıhatalbl;
+        private System.Windows.Forms.Label kuluphatalbl;
+        private System.Windows.Forms.Label sifrehatalbl;
     }
 }
 

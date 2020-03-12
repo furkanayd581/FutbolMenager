@@ -19,7 +19,26 @@ namespace Futbolmenager2
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            AdminTakımlar takım = new AdminTakımlar();
+            takım.Show();
+            this.Hide();
+        }
 
+        private void Button2_MouseMove(object sender, MouseEventArgs e)
+        {
+            btntakımlar.BackColor = Color.Red;
+        }
+
+        private void Admin_anasayfa_Load(object sender, EventArgs e)
+        {
+            admintxt.Text = Giriş.gidenbilgi.ToString();
+        }
+
+        private void Btnoyuncular_Click(object sender, EventArgs e)
+        {
+            AdminOyuncular oyuncular = new AdminOyuncular();
+            oyuncular.Show();
+            this.Hide();
         }
     }
 }

@@ -56,18 +56,35 @@ namespace Futbolmenager2
             komut2.Parameters.Clear();
 
             baglanti.Close();
+
+
+
+            baglanti.Open();
+            SqlCommand komut4 = new SqlCommand();
+            komut4.Connection = baglanti;
+
+            komut4.CommandText = "Select kullanici_kulup From kullanicilar  where kullanici_kulup=@P5";
+            komut4.Parameters.AddWithValue("@P5", kulüptxt.Text);
+            object Kontrol2 = komut4.ExecuteScalar();
+            komut4.Parameters.Clear();
+            baglanti.Close();
+
             if (Kontrol1 != null)
             {
-                emaillbl.Text = "Böyle bir mail var";
+                emaillbl.Text = "Böyle bir mail var!";
 
             }
 
             else if (Kontrol !=null)
             {
-                kullanıcıhatalbl.Text = "Böyle bir kullanıcı var ";
+                kullanıcıhatalbl.Text = "Böyle bir kullanıcı var! ";
+
             }
 
-
+            else if (Kontrol2 !=null)
+            {
+                kuluphatalbl.Text = "Böyle bir kulüp bulunmaktadır!";
+            }
          
             else if (kullanıcıadıtxt.Text.Trim() == string.Empty || sifretxt.Text.Trim() == string.Empty || sifretekrar.Text.Trim() == string.Empty || kulüptxt.Text.Trim() == string.Empty || mailtxt.Text.Trim() == string.Empty )
             {
@@ -82,7 +99,7 @@ namespace Futbolmenager2
             }
             else if(sifretxt.Text != sifretekrar.Text)
             {
-                MessageBox.Show("Şifreler uyuşmuyor!");
+                sifrehatalbl.Text = "Şifreler uyuşmuyor";
             }
 
 
@@ -92,6 +109,7 @@ namespace Futbolmenager2
             else
             {
 
+                
 
 
 
@@ -202,6 +220,8 @@ namespace Futbolmenager2
                 return;
             }
         }
+
+       
     }
 }
 

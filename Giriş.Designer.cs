@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giriş));
-            this.kullanicigrş = new System.Windows.Forms.TextBox();
-            this.şifregrş = new System.Windows.Forms.TextBox();
+            this.kullanicigrştxt = new System.Windows.Forms.TextBox();
+            this.sifregrştxt = new System.Windows.Forms.TextBox();
             this.GirişButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,25 +42,26 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.BeniHatirla = new System.Windows.Forms.CheckBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.kullanicihatalbl = new System.Windows.Forms.Label();
+            this.girishatalbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // kullanicigrş
+            // kullanicigrştxt
             // 
-            this.kullanicigrş.Location = new System.Drawing.Point(396, 115);
-            this.kullanicigrş.Name = "kullanicigrş";
-            this.kullanicigrş.Size = new System.Drawing.Size(100, 20);
-            this.kullanicigrş.TabIndex = 0;
-//            this.kullanicigrş.TextChanged += new System.EventHandler(this.Kullanicigrş_TextChanged);
+            this.kullanicigrştxt.Location = new System.Drawing.Point(396, 115);
+            this.kullanicigrştxt.Name = "kullanicigrştxt";
+            this.kullanicigrştxt.Size = new System.Drawing.Size(100, 20);
+            this.kullanicigrştxt.TabIndex = 0;
             // 
-            // şifregrş
+            // sifregrştxt
             // 
-            this.şifregrş.Location = new System.Drawing.Point(396, 156);
-            this.şifregrş.Name = "şifregrş";
-            this.şifregrş.Size = new System.Drawing.Size(100, 20);
-            this.şifregrş.TabIndex = 1;
-            this.şifregrş.UseSystemPasswordChar = true;
+            this.sifregrştxt.Location = new System.Drawing.Point(396, 156);
+            this.sifregrştxt.Name = "sifregrştxt";
+            this.sifregrştxt.Size = new System.Drawing.Size(100, 20);
+            this.sifregrştxt.TabIndex = 1;
+            this.sifregrştxt.UseSystemPasswordChar = true;
             // 
             // GirişButton
             // 
@@ -82,7 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(764, 48);
             this.panel1.TabIndex = 3;
-//            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label3
             // 
@@ -157,7 +157,6 @@
             this.BeniHatirla.TabIndex = 8;
             this.BeniHatirla.Text = "Beni Hatırla";
             this.BeniHatirla.UseVisualStyleBackColor = true;
-//            this.BeniHatirla.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
             // linkLabel2
             // 
@@ -170,12 +169,31 @@
             this.linkLabel2.Text = "Kayıt Olmak İçin Tıklayınız";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
             // 
+            // kullanicihatalbl
+            // 
+            this.kullanicihatalbl.AutoSize = true;
+            this.kullanicihatalbl.ForeColor = System.Drawing.Color.Coral;
+            this.kullanicihatalbl.Location = new System.Drawing.Point(503, 121);
+            this.kullanicihatalbl.Name = "kullanicihatalbl";
+            this.kullanicihatalbl.Size = new System.Drawing.Size(0, 13);
+            this.kullanicihatalbl.TabIndex = 10;
+            // 
+            // girishatalbl
+            // 
+            this.girishatalbl.AutoSize = true;
+            this.girishatalbl.Location = new System.Drawing.Point(484, 215);
+            this.girishatalbl.Name = "girishatalbl";
+            this.girishatalbl.Size = new System.Drawing.Size(0, 13);
+            this.girishatalbl.TabIndex = 11;
+            // 
             // Giriş
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(765, 421);
+            this.Controls.Add(this.girishatalbl);
+            this.Controls.Add(this.kullanicihatalbl);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.BeniHatirla);
             this.Controls.Add(this.linkLabel1);
@@ -185,8 +203,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GirişButton);
-            this.Controls.Add(this.şifregrş);
-            this.Controls.Add(this.kullanicigrş);
+            this.Controls.Add(this.sifregrştxt);
+            this.Controls.Add(this.kullanicigrştxt);
             this.Name = "Giriş";
             this.Text = "Giriş";
             this.Load += new System.EventHandler(this.Giriş_Load);
@@ -200,8 +218,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox kullanicigrş;
-        private System.Windows.Forms.TextBox şifregrş;
+        private System.Windows.Forms.TextBox kullanicigrştxt;
+        private System.Windows.Forms.TextBox sifregrştxt;
         private System.Windows.Forms.Button GirişButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -213,5 +231,7 @@
         private System.Windows.Forms.CheckBox BeniHatirla;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label kullanicihatalbl;
+        private System.Windows.Forms.Label girishatalbl;
     }
 }

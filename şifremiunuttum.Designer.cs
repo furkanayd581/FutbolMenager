@@ -46,29 +46,31 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(115, 32);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 30);
+            this.button1.Location = new System.Drawing.Point(145, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(77, 37);
             this.button1.TabIndex = 2;
             this.button1.Text = "Gönder";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // şifremiunuttum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(526, 340);
+            this.ClientSize = new System.Drawing.Size(361, 239);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "şifremiunuttum";
             this.Text = "şifremiunuttum";
+            this.Load += new System.EventHandler(this.Şifremiunuttum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

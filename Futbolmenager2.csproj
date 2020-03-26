@@ -82,6 +82,12 @@
     <Compile Include="AdminOyuncular.Designer.cs">
       <DependentUpon>AdminOyuncular.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullanıcıOyuncular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıOyuncular.Designer.cs">
+      <DependentUpon>KullanıcıOyuncular.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="şifremiunuttum.cs">
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciAnasayfa.resx">
       <DependentUpon>KullaniciAnasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıOyuncular.resx">
+      <DependentUpon>KullanıcıOyuncular.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

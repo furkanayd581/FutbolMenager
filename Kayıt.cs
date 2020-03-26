@@ -35,6 +35,8 @@ namespace Futbolmenager2
             DateTime thisDate = DateTime.Today;
             int userprivilages = 0;
 
+
+
            
             baglanti.Open();
             SqlCommand komut3 = new SqlCommand();
@@ -69,6 +71,9 @@ namespace Futbolmenager2
             komut4.Parameters.Clear();
             baglanti.Close();
 
+
+           
+             
             if (Kontrol1 != null)
             {
                 emaillbl.Text = "Böyle bir mail var!";
@@ -115,7 +120,7 @@ namespace Futbolmenager2
 
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("insert into kullanicilar(kullanici_adi,kullanici_sifre" +
-               ",kullanici_kulup,kullanici_email,kullanici_tipi,kullanici_kayitTarih,kullanici_sonGiris)values" +
+               ",kullanici_kulup,kullanici_email,kullanici_tipi,kullanici_kayitTarih,kullanici_kurulusTarih)values" +
                "(@P1,@P2,@P3,@P4,@P5,@P6,@P7)", baglanti);
                 komut.Parameters.AddWithValue("@P1", kullanıcıadıtxt.Text);
                 komut.Parameters.AddWithValue("@P2", sifretxt.Text);
@@ -123,7 +128,7 @@ namespace Futbolmenager2
                 komut.Parameters.AddWithValue("@P4", mailtxt.Text);
                 komut.Parameters.AddWithValue("@P5", userprivilages);
                 komut.Parameters.AddWithValue("@P6", thisDate);
-                komut.Parameters.AddWithValue("@P7", thisDate);
+                komut.Parameters.AddWithValue("@P7", dateTimePicker1.Value);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
 
@@ -221,7 +226,10 @@ namespace Futbolmenager2
             }
         }
 
-       
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

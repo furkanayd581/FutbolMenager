@@ -57,6 +57,8 @@
             this.kullanıcıhatalbl = new System.Windows.Forms.Label();
             this.kuluphatalbl = new System.Windows.Forms.Label();
             this.sifrehatalbl = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.kuruluştarih = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,11 +76,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // kayıtbutton
             // 
             this.kayıtbutton.BackColor = System.Drawing.Color.DarkGray;
-            this.kayıtbutton.Location = new System.Drawing.Point(441, 262);
+            this.kayıtbutton.Location = new System.Drawing.Point(441, 276);
             this.kayıtbutton.Name = "kayıtbutton";
             this.kayıtbutton.Size = new System.Drawing.Size(75, 30);
             this.kayıtbutton.TabIndex = 10;
@@ -89,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(351, 170);
+            this.label3.Location = new System.Drawing.Point(342, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 7;
@@ -98,7 +101,7 @@
             // şifre
             // 
             this.şifre.AutoSize = true;
-            this.şifre.Location = new System.Drawing.Point(351, 110);
+            this.şifre.Location = new System.Drawing.Point(342, 110);
             this.şifre.Name = "şifre";
             this.şifre.Size = new System.Drawing.Size(31, 13);
             this.şifre.TabIndex = 8;
@@ -107,7 +110,7 @@
             // kullanıcı
             // 
             this.kullanıcı.AutoSize = true;
-            this.kullanıcı.Location = new System.Drawing.Point(351, 75);
+            this.kullanıcı.Location = new System.Drawing.Point(337, 71);
             this.kullanıcı.Name = "kullanıcı";
             this.kullanıcı.Size = new System.Drawing.Size(67, 13);
             this.kullanıcı.TabIndex = 9;
@@ -158,7 +161,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(351, 199);
+            this.label1.Location = new System.Drawing.Point(341, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 15;
@@ -293,11 +296,29 @@
             this.sifrehatalbl.Size = new System.Drawing.Size(0, 13);
             this.sifrehatalbl.TabIndex = 41;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(435, 228);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(155, 20);
+            this.dateTimePicker1.TabIndex = 42;
+            // 
+            // kuruluştarih
+            // 
+            this.kuruluştarih.AutoSize = true;
+            this.kuruluştarih.Location = new System.Drawing.Point(332, 234);
+            this.kuruluştarih.Name = "kuruluştarih";
+            this.kuruluştarih.Size = new System.Drawing.Size(72, 13);
+            this.kuruluştarih.TabIndex = 43;
+            this.kuruluştarih.Text = "Kuruluş Tarih:";
+            // 
             // Kayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 441);
+            this.Controls.Add(this.kuruluştarih);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.sifrehatalbl);
             this.Controls.Add(this.kuluphatalbl);
             this.Controls.Add(this.kullanıcıhatalbl);
@@ -366,6 +387,8 @@
         private System.Windows.Forms.Label kullanıcıhatalbl;
         private System.Windows.Forms.Label kuluphatalbl;
         private System.Windows.Forms.Label sifrehatalbl;
+        private System.Windows.Forms.Label kuruluştarih;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

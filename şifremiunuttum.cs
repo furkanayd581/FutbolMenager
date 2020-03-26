@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Futbolmenager2
 {
@@ -23,10 +24,44 @@ namespace Futbolmenager2
         {
 
         }
-
+       string sifre;
+      
         private void Button1_Click(object sender, EventArgs e)
         {
+            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            
+            SqlCommand act = new SqlCommand();
+            act.Connection = baglanti;
+            String aa = sifremiunuttumtxt.Text.ToString();
+            act.CommandText = "select * from kullanicilar where kullanici_email = '"+ aa+"'";
 
+
+            SqlDataReader dr;
+            baglanti.Open();
+            dr = act.ExecuteReader();
+            
+            while (dr.Read())
+            {
+                sifre = dr["kullanici_sifre"].ToString();
+            }
+            MessageBox.Show(aa);
+
+           
+            SmtpClient sc = new SmtpClient();
+            sc.Port = 587;
+            sc.Host = "smtp.gmail.com";
+            sc.EnableSsl = true;
+
+            sc.Credentials = new NetworkCredential("info.footballmenager@gmail.com", "b6948e79");
+            MailMessage mail = new MailMessage();
+
+            mail.From = new MailAddress("info.footballmenager@gmail.com", "Football Menager");
+
+            mail.To.Add(sifremiunuttumtxt.Text);
+            mail.Subject = "FM şifre bildirimi";
+            mail.IsBodyHtml = true;
+            mail.Body = "Şifreniz" +sifre + " dır. ";
+            sc.Send(mail);
         }
     }
 }

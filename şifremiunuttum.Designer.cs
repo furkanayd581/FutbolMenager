@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sifremiunuttumtxt = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,12 +42,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "E-posta:";
             // 
-            // textBox1
+            // sifremiunuttumtxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(115, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 1;
+            this.sifremiunuttumtxt.Location = new System.Drawing.Point(115, 32);
+            this.sifremiunuttumtxt.Name = "sifremiunuttumtxt";
+            this.sifremiunuttumtxt.Size = new System.Drawing.Size(157, 20);
+            this.sifremiunuttumtxt.TabIndex = 1;
             // 
             // button1
             // 
@@ -66,7 +66,7 @@
             this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(361, 239);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sifremiunuttumtxt);
             this.Controls.Add(this.label1);
             this.Name = "şifremiunuttum";
             this.Text = "şifremiunuttum";
@@ -79,7 +79,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox sifremiunuttumtxt;
         private System.Windows.Forms.Button button1;
     }
 }

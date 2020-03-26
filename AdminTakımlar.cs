@@ -51,23 +51,33 @@ namespace Futbolmenager2
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into kulupler(kulup_adi,kulup_acilis_tarihi,kulup_foto,kulup_sampiyonluk,kulup_toplamDeger,kulup_lig)values(@kulupadı,@kulupacilis,@kulupfoto,@kulupsampiyonluk,@kulupdeger,@kuluplig)", baglanti);
             
-            komut.Parameters.AddWithValue("@kulupadı", textBox2.Text);
-            komut.Parameters.AddWithValue("@kulupacilis", textBox3.Text);
+            komut.Parameters.AddWithValue("@kulupadı", kulupaditxt.Text);
+            komut.Parameters.AddWithValue("@kulupacilis", kuluptarihtxt.Text);
             komut.Parameters.AddWithValue("@kulupfoto", textBox4.Text);
-            komut.Parameters.AddWithValue("@kulupsampiyonluk", textBox5.Text);
-            komut.Parameters.AddWithValue("@kulupdeger", textBox6.Text);
-            komut.Parameters.AddWithValue("@kuluplig", textBox7.Text);
+            komut.Parameters.AddWithValue("@kulupsampiyonluk", kulupsampiyonluktxt.Text);
+            komut.Parameters.AddWithValue("@kulupdeger", kulupdegertxt.Text);
+            komut.Parameters.AddWithValue("@kuluplig", kulupligtxt.Text);
             komut.ExecuteNonQuery();
             verilerigöster("select * from kulupler");
             baglanti.Close();
 
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
+            kulupıdtxt.Clear();
+            kulupaditxt.Clear();
+            kuluptarihtxt.Clear();
             textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
+            kulupsampiyonluktxt.Clear();
+            kulupdegertxt.Clear();
+            kulupligtxt.Clear();
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("delete from kulupler where kulup_adi=@kulupadı", baglanti);
+            komut.Parameters.AddWithValue("@kulupadı", kulupaditxt.Text);
+            komut.ExecuteNonQuery();
+            verilerigöster("select*from kulupler");
+            baglanti.Close();
         }
     }
 }

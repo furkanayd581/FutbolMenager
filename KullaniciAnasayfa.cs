@@ -16,10 +16,20 @@ namespace Futbolmenager2
         {
             InitializeComponent();
         }
-
+        public string kullanıcı = Giriş.gidenbilgi.ToString();
         private void KullaniciAnasayfa_Load(object sender, EventArgs e)
         {
             lbltakımadı.Text = Giriş.gidenbilgi.ToString();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            KullanıcıOyuncular oyuncular = new KullanıcıOyuncular();
+                oyuncular.Show();
+                KullaniciAnasayfa k1 = new KullaniciAnasayfa();
+                k1.Close();
+
+                this.Hide();
         }
     }
 }

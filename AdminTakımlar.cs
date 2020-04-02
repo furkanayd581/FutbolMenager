@@ -19,7 +19,7 @@ namespace Futbolmenager2
         }
         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         
-      
+
         public void verilerigöster(string veriler)
            
         {
@@ -31,15 +31,9 @@ namespace Futbolmenager2
             Takımlardatagrid.DataSource = ds.Tables[0];
 
         }
-        private void Takımlardatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        
 
-        }
-
-        private void AdminTakımlar_Load(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void Takımbtn_Click(object sender, EventArgs e)
         {
@@ -49,25 +43,27 @@ namespace Futbolmenager2
         private void Button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into kulupler(kulup_adi,kulup_acilis_tarihi,kulup_foto,kulup_sampiyonluk,kulup_toplamDeger,kulup_lig)values(@kulupadı,@kulupacilis,@kulupfoto,@kulupsampiyonluk,@kulupdeger,@kuluplig)", baglanti);
+            SqlCommand komut = new SqlCommand("insert into kulupler(kulup_adi,kulup_acilis_tarihi,kulup_foto,kulup_sampiyonluk,kulup_toplamDeger,kulup_lig,stadyum)values(@kulupadı,@kulupacilis,@kulupfoto,@kulupsampiyonluk,@kulupdeger,@kuluplig,@Stadyum)", baglanti);
             
             komut.Parameters.AddWithValue("@kulupadı", kulupaditxt.Text);
             komut.Parameters.AddWithValue("@kulupacilis", kuluptarihtxt.Text);
-            komut.Parameters.AddWithValue("@kulupfoto", textBox4.Text);
+            komut.Parameters.AddWithValue("@kulupfoto", resimekletxt.Text);
             komut.Parameters.AddWithValue("@kulupsampiyonluk", kulupsampiyonluktxt.Text);
             komut.Parameters.AddWithValue("@kulupdeger", kulupdegertxt.Text);
             komut.Parameters.AddWithValue("@kuluplig", kulupligtxt.Text);
+            komut.Parameters.AddWithValue("@Stadyum", stadyumtxt.Text);
             komut.ExecuteNonQuery();
             verilerigöster("select * from kulupler");
             baglanti.Close();
 
-            kulupıdtxt.Clear();
+            
             kulupaditxt.Clear();
             kuluptarihtxt.Clear();
-            textBox4.Clear();
+            resimekletxt.Clear();
             kulupsampiyonluktxt.Clear();
             kulupdegertxt.Clear();
             kulupligtxt.Clear();
+            stadyumtxt.Clear();
         }
 
         private void Button1_Click_1(object sender, EventArgs e)
@@ -78,6 +74,61 @@ namespace Futbolmenager2
             komut.ExecuteNonQuery();
             verilerigöster("select*from kulupler");
             baglanti.Close();
+        }
+       
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
+            openFileDialog1.ShowDialog();
+            pictureBox1.ImageLocation = openFileDialog1.FileName;
+            resimekletxt.Text = openFileDialog1.FileName;
+
+        }
+
+      private void Takımlardatagrid_CellClick(object sender,DataGridViewCellEventArgs e)
+        {
+            
+            
+        }
+
+        private void AdminTakımlar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Takımlardatagrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (Takımlardatagrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                Takımlardatagrid.CurrentRow.Selected = true;
+
+                kulupaditxt.Text = Takımlardatagrid.CurrentRow.Cells[1].FormattedValue.ToString();
+                kuluptarihtxt.Text = Takımlardatagrid.CurrentRow.Cells[2].FormattedValue.ToString();
+                resimekletxt.Text = Takımlardatagrid.CurrentRow.Cells[3].FormattedValue.ToString();
+                kulupsampiyonluktxt.Text = Takımlardatagrid.CurrentRow.Cells[4].FormattedValue.ToString();
+                kulupdegertxt.Text = Takımlardatagrid.CurrentRow.Cells[5].FormattedValue.ToString();
+                kulupligtxt.Text = Takımlardatagrid.CurrentRow.Cells[6].FormattedValue.ToString();
+                stadyumtxt.Text= Takımlardatagrid.CurrentRow.Cells[7].FormattedValue.ToString();
+
+
+            }
+
+        }
+
+      
+       
+        
+        private void Aramatxt_TextChanged(object sender, EventArgs e)
+        {
+         
+           
+            baglanti.Open();
+            DataTable tbl = new DataTable();
+            SqlDataAdapter ara = new SqlDataAdapter("select * from kulupler where kulup_adi like'%" + aramatxt.Text + "%'", baglanti);
+            ara.Fill(tbl);
+            baglanti.Close();
+            Takımlardatagrid.DataSource = tbl;
+
         }
     }
 }

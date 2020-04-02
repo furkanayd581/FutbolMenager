@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.btnTakım = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnoyuncular = new System.Windows.Forms.Button();
+            this.btntransfer = new System.Windows.Forms.Button();
+            this.btnacıkarttırma = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbltakımadı = new System.Windows.Forms.Label();
@@ -48,37 +48,38 @@
             this.btnTakım.TabIndex = 0;
             this.btnTakım.Text = "Takım";
             this.btnTakım.UseVisualStyleBackColor = false;
+            this.btnTakım.Click += new System.EventHandler(this.BtnTakım_Click);
             // 
-            // button1
+            // btnoyuncular
             // 
-            this.button1.BackColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(334, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 57);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Oyuncular";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnoyuncular.BackColor = System.Drawing.Color.Coral;
+            this.btnoyuncular.Location = new System.Drawing.Point(334, 157);
+            this.btnoyuncular.Name = "btnoyuncular";
+            this.btnoyuncular.Size = new System.Drawing.Size(159, 57);
+            this.btnoyuncular.TabIndex = 2;
+            this.btnoyuncular.Text = "Oyuncular";
+            this.btnoyuncular.UseVisualStyleBackColor = false;
+            this.btnoyuncular.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // btntransfer
             // 
-            this.button2.BackColor = System.Drawing.Color.Coral;
-            this.button2.Location = new System.Drawing.Point(334, 220);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 57);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Transfer Listesi";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btntransfer.BackColor = System.Drawing.Color.Coral;
+            this.btntransfer.Location = new System.Drawing.Point(334, 220);
+            this.btntransfer.Name = "btntransfer";
+            this.btntransfer.Size = new System.Drawing.Size(159, 57);
+            this.btntransfer.TabIndex = 3;
+            this.btntransfer.Text = "Transfer Listesi";
+            this.btntransfer.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnacıkarttırma
             // 
-            this.button3.BackColor = System.Drawing.Color.Coral;
-            this.button3.Location = new System.Drawing.Point(334, 94);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 57);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Açık Arttırma";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnacıkarttırma.BackColor = System.Drawing.Color.Coral;
+            this.btnacıkarttırma.Location = new System.Drawing.Point(334, 94);
+            this.btnacıkarttırma.Name = "btnacıkarttırma";
+            this.btnacıkarttırma.Size = new System.Drawing.Size(159, 57);
+            this.btnacıkarttırma.TabIndex = 1;
+            this.btnacıkarttırma.Text = "Açık Arttırma";
+            this.btnacıkarttırma.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -95,6 +96,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(71, 62);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 76);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -107,6 +109,7 @@
             this.lbltakımadı.Size = new System.Drawing.Size(35, 13);
             this.lbltakımadı.TabIndex = 3;
             this.lbltakımadı.Text = "label1";
+            this.lbltakımadı.Click += new System.EventHandler(this.Lbltakımadı_Click);
             // 
             // KullaniciAnasayfa
             // 
@@ -117,9 +120,9 @@
             this.Controls.Add(this.lbltakımadı);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnacıkarttırma);
+            this.Controls.Add(this.btntransfer);
+            this.Controls.Add(this.btnoyuncular);
             this.Controls.Add(this.btnTakım);
             this.Name = "KullaniciAnasayfa";
             this.Text = "KullaniciAnasayfa";
@@ -134,9 +137,9 @@
         #endregion
 
         private System.Windows.Forms.Button btnTakım;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnoyuncular;
+        private System.Windows.Forms.Button btntransfer;
+        private System.Windows.Forms.Button btnacıkarttırma;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbltakımadı;

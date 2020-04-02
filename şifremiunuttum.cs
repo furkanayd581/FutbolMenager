@@ -32,8 +32,8 @@ namespace Futbolmenager2
             
             SqlCommand act = new SqlCommand();
             act.Connection = baglanti;
-            String aa = sifremiunuttumtxt.Text.ToString();
-            act.CommandText = "select * from kullanicilar where kullanici_email = '"+ aa+"'";
+           
+            act.CommandText = "select * from kullanicilar where kullanici_email = '"+ sifremiunuttumtxt.Text+"'";
 
 
             SqlDataReader dr;
@@ -44,7 +44,7 @@ namespace Futbolmenager2
             {
                 sifre = dr["kullanici_sifre"].ToString();
             }
-            MessageBox.Show(aa);
+            
 
            
             SmtpClient sc = new SmtpClient();

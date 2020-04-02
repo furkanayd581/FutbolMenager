@@ -11,38 +11,25 @@ using System.Windows.Forms;
 
 namespace Futbolmenager2
 {
-    public partial class KullanıcıOyuncular : Form
+    public partial class KullanıcıTakım : Form
     {
-        public KullanıcıOyuncular()
+        public KullanıcıTakım()
         {
             InitializeComponent();
             SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         }
-      
-        private void KullanıcıOyuncular_Load(object sender, EventArgs e)
+
+        private void KullanıcıTakım_Load(object sender, EventArgs e)
         {
             KullaniciAnasayfa ka = new KullaniciAnasayfa();
-            String oyuncular = ka.kullanıcı.ToString();
+            String takım = ka.kullanıcı.ToString();
             SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
-            SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from sporcular where sporcu_kulup= (select kullanici_kulup from kullanicilar where kullanici_adi='"+oyuncular.ToString()+"')" , baglanti);
+            SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from kulupler where kulup_adi= (select kullanici_kulup from kullanicilar where kullanici_adi='" + takım.ToString() + "')", baglanti);
             DataTable sqlVerialma = new DataTable();
-
             sqlvericekme.Fill(sqlVerialma);
-
-            KullanıcıDatagrid.DataSource = sqlVerialma;
+            Takımdatagridview.DataSource = sqlVerialma;
             baglanti.Close();
-
-        }
-
-        private void Transferbtn_Click(object sender, EventArgs e)
-        {
-            KullanıcıTransferliste transfer = new KullanıcıTransferliste();
-            transfer.Show();
-
-            KullanıcıOyuncular oyuncular = new KullanıcıOyuncular();
-            oyuncular.Close();
-            this.Hide();
 
         }
     }

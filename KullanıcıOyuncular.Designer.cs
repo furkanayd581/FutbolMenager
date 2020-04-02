@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.KullanıcıDatagrid = new System.Windows.Forms.DataGridView();
+            this.transferbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.KullanıcıDatagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,14 +41,25 @@
             this.KullanıcıDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KullanıcıDatagrid.Location = new System.Drawing.Point(0, 3);
             this.KullanıcıDatagrid.Name = "KullanıcıDatagrid";
-            this.KullanıcıDatagrid.Size = new System.Drawing.Size(804, 200);
+            this.KullanıcıDatagrid.Size = new System.Drawing.Size(890, 285);
             this.KullanıcıDatagrid.TabIndex = 0;
+            // 
+            // transferbtn
+            // 
+            this.transferbtn.Location = new System.Drawing.Point(413, 294);
+            this.transferbtn.Name = "transferbtn";
+            this.transferbtn.Size = new System.Drawing.Size(81, 34);
+            this.transferbtn.TabIndex = 1;
+            this.transferbtn.Text = "Transfer Et";
+            this.transferbtn.UseVisualStyleBackColor = true;
+            this.transferbtn.Click += new System.EventHandler(this.Transferbtn_Click);
             // 
             // KullanıcıOyuncular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 348);
+            this.ClientSize = new System.Drawing.Size(889, 400);
+            this.Controls.Add(this.transferbtn);
             this.Controls.Add(this.KullanıcıDatagrid);
             this.Name = "KullanıcıOyuncular";
             this.Text = "KullanıcıOyuncular";
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView KullanıcıDatagrid;
+        private System.Windows.Forms.Button transferbtn;
     }
 }

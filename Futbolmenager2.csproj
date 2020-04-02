@@ -88,6 +88,18 @@
     <Compile Include="KullanıcıOyuncular.Designer.cs">
       <DependentUpon>KullanıcıOyuncular.cs</DependentUpon>
     </Compile>
+    <Compile Include="KullanıcıTakım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıTakım.Designer.cs">
+      <DependentUpon>KullanıcıTakım.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullanıcıTransferliste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullanıcıTransferliste.Designer.cs">
+      <DependentUpon>KullanıcıTransferliste.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="şifremiunuttum.cs">
@@ -116,6 +128,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullanıcıOyuncular.resx">
       <DependentUpon>KullanıcıOyuncular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıTakım.resx">
+      <DependentUpon>KullanıcıTakım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanıcıTransferliste.resx">
+      <DependentUpon>KullanıcıTransferliste.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

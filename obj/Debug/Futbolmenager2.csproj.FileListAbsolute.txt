@@ -20,3 +20,5 @@ C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futb
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.AdminOyuncular.resources
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.KullaniciAnasayfa.resources
 C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.KullanıcıOyuncular.resources
+C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.KullanıcıTakım.resources
+C:\Users\User\Desktop\FUTBOLMENAGET\Futbolmenager2\Futbolmenager2\obj\Debug\Futbolmenager2.KullanıcıTransferliste.resources

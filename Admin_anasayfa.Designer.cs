@@ -34,12 +34,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btntakımlar = new System.Windows.Forms.Button();
             this.btntransferliste = new System.Windows.Forms.Button();
-            this.btnacikarttirma = new System.Windows.Forms.Button();
             this.btnkayitlikullanici = new System.Windows.Forms.Button();
-            this.btnmesajbildirim = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.admintxt = new System.Windows.Forms.Label();
             this.btnoyuncular = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,9 +48,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 58);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(776, 54);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -89,7 +88,7 @@
             this.btntakımlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btntakımlar.Location = new System.Drawing.Point(12, 62);
             this.btntakımlar.Name = "btntakımlar";
-            this.btntakımlar.Size = new System.Drawing.Size(125, 50);
+            this.btntakımlar.Size = new System.Drawing.Size(136, 50);
             this.btntakımlar.TabIndex = 6;
             this.btntakımlar.Text = "Takımlar";
             this.btntakımlar.UseVisualStyleBackColor = false;
@@ -100,45 +99,23 @@
             // 
             this.btntransferliste.BackColor = System.Drawing.Color.White;
             this.btntransferliste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btntransferliste.Location = new System.Drawing.Point(260, 62);
+            this.btntransferliste.Location = new System.Drawing.Point(317, 62);
             this.btntransferliste.Name = "btntransferliste";
-            this.btntransferliste.Size = new System.Drawing.Size(125, 50);
+            this.btntransferliste.Size = new System.Drawing.Size(161, 50);
             this.btntransferliste.TabIndex = 8;
             this.btntransferliste.Text = "Transfer Listesi";
             this.btntransferliste.UseVisualStyleBackColor = false;
-            // 
-            // btnacikarttirma
-            // 
-            this.btnacikarttirma.BackColor = System.Drawing.Color.White;
-            this.btnacikarttirma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnacikarttirma.Location = new System.Drawing.Point(384, 62);
-            this.btnacikarttirma.Name = "btnacikarttirma";
-            this.btnacikarttirma.Size = new System.Drawing.Size(125, 50);
-            this.btnacikarttirma.TabIndex = 9;
-            this.btnacikarttirma.Text = "Açık Arttırma";
-            this.btnacikarttirma.UseVisualStyleBackColor = false;
             // 
             // btnkayitlikullanici
             // 
             this.btnkayitlikullanici.BackColor = System.Drawing.Color.White;
             this.btnkayitlikullanici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnkayitlikullanici.Location = new System.Drawing.Point(508, 62);
+            this.btnkayitlikullanici.Location = new System.Drawing.Point(641, 62);
             this.btnkayitlikullanici.Name = "btnkayitlikullanici";
-            this.btnkayitlikullanici.Size = new System.Drawing.Size(125, 50);
+            this.btnkayitlikullanici.Size = new System.Drawing.Size(147, 50);
             this.btnkayitlikullanici.TabIndex = 12;
             this.btnkayitlikullanici.Text = "Kayıtlı Kullanıcılar";
             this.btnkayitlikullanici.UseVisualStyleBackColor = false;
-            // 
-            // btnmesajbildirim
-            // 
-            this.btnmesajbildirim.BackColor = System.Drawing.Color.White;
-            this.btnmesajbildirim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmesajbildirim.Location = new System.Drawing.Point(632, 62);
-            this.btnmesajbildirim.Name = "btnmesajbildirim";
-            this.btnmesajbildirim.Size = new System.Drawing.Size(156, 50);
-            this.btnmesajbildirim.TabIndex = 13;
-            this.btnmesajbildirim.Text = "Mesaj Bildirimleri";
-            this.btnmesajbildirim.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -161,13 +138,24 @@
             // 
             this.btnoyuncular.BackColor = System.Drawing.Color.White;
             this.btnoyuncular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnoyuncular.Location = new System.Drawing.Point(136, 62);
+            this.btnoyuncular.Location = new System.Drawing.Point(144, 62);
             this.btnoyuncular.Name = "btnoyuncular";
-            this.btnoyuncular.Size = new System.Drawing.Size(125, 50);
+            this.btnoyuncular.Size = new System.Drawing.Size(176, 50);
             this.btnoyuncular.TabIndex = 7;
             this.btnoyuncular.Text = "Oyuncular";
             this.btnoyuncular.UseVisualStyleBackColor = false;
             this.btnoyuncular.Click += new System.EventHandler(this.Btnoyuncular_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(476, 62);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(167, 50);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Açık Arttırma";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Admin_anasayfa
             // 
@@ -176,9 +164,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.admintxt);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.btnmesajbildirim);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnkayitlikullanici);
-            this.Controls.Add(this.btnacikarttirma);
             this.Controls.Add(this.btntransferliste);
             this.Controls.Add(this.btnoyuncular);
             this.Controls.Add(this.btntakımlar);
@@ -206,11 +193,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btntakımlar;
         private System.Windows.Forms.Button btntransferliste;
-        private System.Windows.Forms.Button btnacikarttirma;
         private System.Windows.Forms.Button btnkayitlikullanici;
-        private System.Windows.Forms.Button btnmesajbildirim;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label admintxt;
         private System.Windows.Forms.Button btnoyuncular;
+        private System.Windows.Forms.Button button2;
     }
 }

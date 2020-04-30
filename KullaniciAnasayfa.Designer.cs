@@ -31,10 +31,10 @@
             this.btnTakım = new System.Windows.Forms.Button();
             this.btnoyuncular = new System.Windows.Forms.Button();
             this.btntransfer = new System.Windows.Forms.Button();
-            this.btnacıkarttırma = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbltakımadı = new System.Windows.Forms.Label();
+            this.btnacıkarttırma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -70,16 +70,7 @@
             this.btntransfer.TabIndex = 3;
             this.btntransfer.Text = "Transfer Listesi";
             this.btntransfer.UseVisualStyleBackColor = false;
-            // 
-            // btnacıkarttırma
-            // 
-            this.btnacıkarttırma.BackColor = System.Drawing.Color.Coral;
-            this.btnacıkarttırma.Location = new System.Drawing.Point(334, 94);
-            this.btnacıkarttırma.Name = "btnacıkarttırma";
-            this.btnacıkarttırma.Size = new System.Drawing.Size(159, 57);
-            this.btnacıkarttırma.TabIndex = 1;
-            this.btnacıkarttırma.Text = "Açık Arttırma";
-            this.btnacıkarttırma.UseVisualStyleBackColor = false;
+            this.btntransfer.Click += new System.EventHandler(this.Btntransfer_Click);
             // 
             // pictureBox1
             // 
@@ -111,6 +102,16 @@
             this.lbltakımadı.Text = "label1";
             this.lbltakımadı.Click += new System.EventHandler(this.Lbltakımadı_Click);
             // 
+            // btnacıkarttırma
+            // 
+            this.btnacıkarttırma.BackColor = System.Drawing.Color.Coral;
+            this.btnacıkarttırma.Location = new System.Drawing.Point(334, 94);
+            this.btnacıkarttırma.Name = "btnacıkarttırma";
+            this.btnacıkarttırma.Size = new System.Drawing.Size(159, 57);
+            this.btnacıkarttırma.TabIndex = 1;
+            this.btnacıkarttırma.Text = "Açık Arttırma";
+            this.btnacıkarttırma.UseVisualStyleBackColor = false;
+            // 
             // KullaniciAnasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,9 +140,9 @@
         private System.Windows.Forms.Button btnTakım;
         private System.Windows.Forms.Button btnoyuncular;
         private System.Windows.Forms.Button btntransfer;
-        private System.Windows.Forms.Button btnacıkarttırma;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbltakımadı;
+        private System.Windows.Forms.Button btnacıkarttırma;
     }
 }

@@ -41,12 +41,13 @@
             this.KullanıcıDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KullanıcıDatagrid.Location = new System.Drawing.Point(0, 3);
             this.KullanıcıDatagrid.Name = "KullanıcıDatagrid";
+            this.KullanıcıDatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KullanıcıDatagrid.Size = new System.Drawing.Size(890, 285);
             this.KullanıcıDatagrid.TabIndex = 0;
             // 
             // transferbtn
             // 
-            this.transferbtn.Location = new System.Drawing.Point(413, 294);
+            this.transferbtn.Location = new System.Drawing.Point(359, 294);
             this.transferbtn.Name = "transferbtn";
             this.transferbtn.Size = new System.Drawing.Size(81, 34);
             this.transferbtn.TabIndex = 1;

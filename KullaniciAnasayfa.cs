@@ -72,5 +72,16 @@ namespace Futbolmenager2
         {
 
         }
+
+        private void Btntransfer_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+
+        
+        }
     }
 }

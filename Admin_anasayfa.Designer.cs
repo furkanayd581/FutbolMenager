@@ -105,6 +105,7 @@
             this.btntransferliste.TabIndex = 8;
             this.btntransferliste.Text = "Transfer Listesi";
             this.btntransferliste.UseVisualStyleBackColor = false;
+            this.btntransferliste.Click += new System.EventHandler(this.btntransferliste_Click);
             // 
             // btnkayitlikullanici
             // 

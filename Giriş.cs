@@ -20,7 +20,7 @@ namespace Futbolmenager2
             InitializeComponent();
            
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         
         private void Giriş_Load(object sender, EventArgs e)
         {

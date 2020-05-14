@@ -40,5 +40,10 @@ namespace Futbolmenager2
             oyuncular.Show();
             this.Hide();
         }
+
+        private void btntransferliste_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

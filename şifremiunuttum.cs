@@ -28,7 +28,7 @@ namespace Futbolmenager2
       
         private void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             
             SqlCommand act = new SqlCommand();
             act.Connection = baglanti;

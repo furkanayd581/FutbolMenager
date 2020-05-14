@@ -28,7 +28,7 @@ namespace Futbolmenager2
         public void takimcek ()
         {
 
-            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
 
             SqlCommand act = new SqlCommand();
             act.Connection = baglanti;
@@ -45,7 +45,7 @@ namespace Futbolmenager2
                 t_amblem= dr["kulup_foto"].ToString();
             }
 
-            pictureBox2.Image = Image.FromFile(t_amblem);
+           // pictureBox2.Image = Image.FromFile(t_amblem);
 
         }
 
@@ -75,7 +75,10 @@ namespace Futbolmenager2
 
         private void Btntransfer_Click(object sender, EventArgs e)
         {
-           
+          KullanıcıTransferliste liste = new KullanıcıTransferliste();
+            liste.Show();
+            
+
         }
 
         private void Button1_Click_1(object sender, EventArgs e)

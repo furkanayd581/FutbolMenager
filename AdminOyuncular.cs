@@ -25,7 +25,7 @@ namespace Futbolmenager2
         
         private void AdminOyuncular_Load(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-1ONI7GL\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from sporcular", baglanti);
             DataTable sqlVerialma = new DataTable();

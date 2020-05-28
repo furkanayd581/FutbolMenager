@@ -36,7 +36,6 @@
             this.şifre = new System.Windows.Forms.Label();
             this.kullanıcı = new System.Windows.Forms.Label();
             this.kullanıcıadıtxt = new System.Windows.Forms.TextBox();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.sifretxt = new System.Windows.Forms.TextBox();
             this.kulüptxt = new System.Windows.Forms.TextBox();
             this.mailtxt = new System.Windows.Forms.TextBox();
@@ -59,12 +58,13 @@
             this.sifrehatalbl = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.kuruluştarih = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -124,15 +124,6 @@
             this.kullanıcıadıtxt.Size = new System.Drawing.Size(100, 20);
             this.kullanıcıadıtxt.TabIndex = 1;
             this.kullanıcıadıtxt.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(831, 433);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(10, 60);
-            this.axWindowsMediaPlayer1.TabIndex = 11;
             // 
             // sifretxt
             // 
@@ -312,11 +303,21 @@
             this.kuruluştarih.TabIndex = 43;
             this.kuruluştarih.Text = "Kuruluş Tarih:";
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(819, 411);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(22, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 44;
+            // 
             // Kayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 433);
+            this.ClientSize = new System.Drawing.Size(841, 434);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.kuruluştarih);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.sifrehatalbl);
@@ -336,7 +337,6 @@
             this.Controls.Add(this.mailtxt);
             this.Controls.Add(this.kulüptxt);
             this.Controls.Add(this.sifretxt);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.kayıtbutton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -348,11 +348,11 @@
             this.Text = "Kayıt Ol";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,7 +366,6 @@
         private System.Windows.Forms.Label şifre;
         private System.Windows.Forms.Label kullanıcı;
         private System.Windows.Forms.TextBox kullanıcıadıtxt;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.TextBox sifretxt;
         private System.Windows.Forms.TextBox kulüptxt;
         private System.Windows.Forms.TextBox mailtxt;
@@ -389,6 +388,7 @@
         private System.Windows.Forms.Label sifrehatalbl;
         private System.Windows.Forms.Label kuruluştarih;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 

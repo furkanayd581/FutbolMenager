@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Media;
+
 using System.Windows.Forms;
 
 namespace Futbolmenager2
@@ -23,7 +25,7 @@ namespace Futbolmenager2
         private void Form1_Load(object sender, EventArgs e)
         {
            
-            axWindowsMediaPlayer1.URL = "C:\\Users\\User\\Desktop\\waka.mp3";
+            axWindowsMediaPlayer1.URL = "Waka Waka.mp3";
             axWindowsMediaPlayer1.Hide();
 
 
@@ -227,6 +229,11 @@ namespace Futbolmenager2
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void axWindowsMediaPlayer2_Enter(object sender, EventArgs e)
         {
 
         }

@@ -43,6 +43,20 @@ namespace Futbolmenager2
 
         private void btntransferliste_Click(object sender, EventArgs e)
         {
+            AdminTransferListe trnsfr = new AdminTransferListe();
+            trnsfr.Show();
+            this.Hide();
+        }
+
+        private void btnkayitlikullanici_Click(object sender, EventArgs e)
+        {
+            AdminKayitliKullanici kyt = new AdminKayitliKullanici();
+            kyt.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

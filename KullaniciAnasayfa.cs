@@ -25,6 +25,8 @@ namespace Futbolmenager2
 
         }
         public string t_amblem;
+        
+
         public void takimcek ()
         {
 
@@ -45,7 +47,7 @@ namespace Futbolmenager2
                 t_amblem= dr["kulup_foto"].ToString();
             }
 
-           // pictureBox2.Image = Image.FromFile(t_amblem);
+            pictureBox2.Image = Image.FromFile(t_amblem);
 
         }
 

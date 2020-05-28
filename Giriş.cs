@@ -14,14 +14,15 @@ namespace Futbolmenager2
     public partial class Giriş : Form
     {
         public static string gidenbilgi = "";
-
+   
         public Giriş()
         {
             InitializeComponent();
            
         }
         SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
-        
+       
+
         private void Giriş_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.UserName!=string.Empty)
@@ -29,17 +30,18 @@ namespace Futbolmenager2
                 kullanicigrştxt.Text = Properties.Settings.Default.UserName;
                 
             }
+         
         }
-
+        
         private void Button1_Click(object sender, EventArgs e)
 
         {
             gidenbilgi = kullanicigrştxt.Text;
-
+            
             try
             {
                 
-                SqlCommand cmd = new SqlCommand("select kullanici_tipi from kullanicilar where kullanici_adi = @KAdi and kullanici_sifre = @KParola", baglanti);
+                SqlCommand cmd = new SqlCommand("select * from kullanicilar where kullanici_adi = @KAdi and kullanici_sifre = @KParola", baglanti);
                 cmd.Parameters.AddWithValue("@KAdi", kullanicigrştxt.Text);
                 cmd.Parameters.AddWithValue("@KParola", sifregrştxt.Text);
                 cmd.Connection.Open();
@@ -48,7 +50,11 @@ namespace Futbolmenager2
                 {
                     while (rd.Read()) // reader Okuyabiliyorsa
                     {
-                        if (rd["kullanici_tipi"].ToString() == "1") // 1 Rolü Admin'e ait olarak Ayarlanmışdır
+
+                        string aaa = rd["kullanici_tipi"].ToString();
+
+
+                        if (rd["kullanici_tipi"].ToString() == "True") // 1 Rolü Admin'e ait olarak Ayarlanmışdır
                         {
                             // Kullanıcı Rolü 1 ise Admin Ekranı Aç 
                             Admin_anasayfa admin = new Admin_anasayfa();

@@ -120,15 +120,50 @@ namespace Futbolmenager2
         
         private void Aramatxt_TextChanged(object sender, EventArgs e)
         {
-         
-           
-            baglanti.Open();
-            DataTable tbl = new DataTable();
-            SqlDataAdapter ara = new SqlDataAdapter("select * from kulupler where kulup_adi like'%" + aramatxt.Text + "%'", baglanti);
-            ara.Fill(tbl);
-            baglanti.Close();
-            Takımlardatagrid.DataSource = tbl;
 
+            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            baglanti.Open();
+
+
+
+
+            if (comboBox1.Text == "ADİ")
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_adi like '" + aramatxt.Text + "%'", baglanti);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+                Takımlardatagrid.DataSource = data;
+            }
+            else if (comboBox1.Text=="SAMPİYON")
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_sampiyonluk like '" + aramatxt.Text + "%'", baglanti);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+                Takımlardatagrid.DataSource = data;
+            }
+
+            else if (comboBox1.Text == "LİG")
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_lig like '" + aramatxt.Text + "%'", baglanti);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+                Takımlardatagrid.DataSource = data;
+            }
+
+            else if (comboBox1.Text == "STADYUM")
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where stadyum like '" + aramatxt.Text + "%'", baglanti);
+                DataTable data = new DataTable();
+                sda.Fill(data);
+                Takımlardatagrid.DataSource = data;
+            }
+
+
+        }
+
+        private void güncelbtn_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

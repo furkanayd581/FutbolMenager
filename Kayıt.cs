@@ -20,16 +20,12 @@ namespace Futbolmenager2
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-            axWindowsMediaPlayer1.URL = "Waka Waka.mp3";
-            axWindowsMediaPlayer1.Hide();
-
-
-
+            
+            axWindowsMediaPlayer1.URL = "C:\\Users\\Lenovo\\Desktop\\FutbolMenager\\Waka Waka.mp3";
         }
 
         private void Giriş_Click(object sender, EventArgs e)
@@ -37,9 +33,6 @@ namespace Futbolmenager2
             DateTime thisDate = DateTime.Today;
             int userprivilages = 0;
 
-
-
-           
             baglanti.Open();
             SqlCommand komut3 = new SqlCommand();
             komut3.Connection = baglanti;
@@ -72,9 +65,6 @@ namespace Futbolmenager2
             object Kontrol2 = komut4.ExecuteScalar();
             komut4.Parameters.Clear();
             baglanti.Close();
-
-
-           
              
             if (Kontrol1 != null)
             {
@@ -109,17 +99,8 @@ namespace Futbolmenager2
                 sifrehatalbl.Text = "Şifreler uyuşmuyor";
             }
 
-
-
-
-
             else
             {
-
-                
-
-
-
                 baglanti.Open();
                 SqlCommand komut = new SqlCommand("insert into kullanicilar(kullanici_adi,kullanici_sifre" +
                ",kullanici_kulup,kullanici_email,kullanici_tipi,kullanici_kayitTarih,kullanici_kurulusTarih)values" +
@@ -133,8 +114,6 @@ namespace Futbolmenager2
                 komut.Parameters.AddWithValue("@P7", dateTimePicker1.Value);
                 komut.ExecuteNonQuery();
                 baglanti.Close();
-
-
 
                 Giriş grş = new Giriş();
                 grş.Show();
@@ -158,8 +137,6 @@ namespace Futbolmenager2
                 kullanıcılbl.Visible = false;
             }
 
-
-
         }
 
       
@@ -172,15 +149,6 @@ namespace Futbolmenager2
         {
             System.Diagnostics.Process.Start("www.twitter.com");
         }
-
-        
-
-        private void ProgressBar1_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-   
 
    
         private void TextBox2_TextChanged(object sender, EventArgs e)
@@ -227,15 +195,9 @@ namespace Futbolmenager2
                 return;
             }
         }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void axWindowsMediaPlayer2_Enter(object sender, EventArgs e)
-        {
-
+            System.Diagnostics.Process.Start("www.instagram.com");
         }
     }
 }

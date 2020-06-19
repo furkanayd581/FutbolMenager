@@ -17,7 +17,7 @@ namespace Futbolmenager2
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         
 
         public void verilerigöster(string veriler)
@@ -43,7 +43,7 @@ namespace Futbolmenager2
         private void Button1_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert into kulupler(kulup_adi,kulup_acilis_tarihi,kulup_foto,kulup_sampiyonluk,kulup_toplamDeger,kulup_lig,stadyum)values(@kulupadı,@kulupacilis,@kulupfoto,@kulupsampiyonluk,@kulupdeger,@kuluplig,@Stadyum)", baglanti);
+            SqlCommand komut = new SqlCommand("insert into kulupler(kulup_adi,kulup_acilis_tarihi,kulup_foto,kulup_sampiyonluk,kulup_toplamBütce,kulup_lig,stadyum)values(@kulupadı,@kulupacilis,@kulupfoto,@kulupsampiyonluk,@kulupdeger,@kuluplig,@Stadyum)", baglanti);
             
             komut.Parameters.AddWithValue("@kulupadı", kulupaditxt.Text);
             komut.Parameters.AddWithValue("@kulupacilis", kuluptarihtxt.Text);
@@ -85,17 +85,9 @@ namespace Futbolmenager2
 
         }
 
-      private void Takımlardatagrid_CellClick(object sender,DataGridViewCellEventArgs e)
-        {
-            
-            
-        }
+     
 
-        private void AdminTakımlar_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void Takımlardatagrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (Takımlardatagrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -110,33 +102,27 @@ namespace Futbolmenager2
                 kulupligtxt.Text = Takımlardatagrid.CurrentRow.Cells[6].FormattedValue.ToString();
                 stadyumtxt.Text= Takımlardatagrid.CurrentRow.Cells[7].FormattedValue.ToString();
 
-
             }
 
         }
 
-      
-       
-        
         private void Aramatxt_TextChanged(object sender, EventArgs e)
         {
 
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
-
-
 
 
             if (comboBox1.Text == "ADİ")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_adi like '" + aramatxt.Text + "%'", baglanti);
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamBütce, kulup_lig, stadyum from kulupler where kulup_adi like '" + aramatxt.Text + "%'", baglanti);
                 DataTable data = new DataTable();
                 sda.Fill(data);
                 Takımlardatagrid.DataSource = data;
             }
             else if (comboBox1.Text=="SAMPİYON")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_sampiyonluk like '" + aramatxt.Text + "%'", baglanti);
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamBütce, kulup_lig, stadyum from kulupler where kulup_sampiyonluk like '" + aramatxt.Text + "%'", baglanti);
                 DataTable data = new DataTable();
                 sda.Fill(data);
                 Takımlardatagrid.DataSource = data;
@@ -144,7 +130,7 @@ namespace Futbolmenager2
 
             else if (comboBox1.Text == "LİG")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where kulup_lig like '" + aramatxt.Text + "%'", baglanti);
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamBütce, kulup_lig, stadyum from kulupler where kulup_lig like '" + aramatxt.Text + "%'", baglanti);
                 DataTable data = new DataTable();
                 sda.Fill(data);
                 Takımlardatagrid.DataSource = data;
@@ -152,7 +138,7 @@ namespace Futbolmenager2
 
             else if (comboBox1.Text == "STADYUM")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamDeger, kulup_lig, stadyum from kulupler where stadyum like '" + aramatxt.Text + "%'", baglanti);
+                SqlDataAdapter sda = new SqlDataAdapter("Select kulup_ID, kulup_adi, kulup_acilis_tarihi, kulup_foto, kulup_sampiyonluk, kulup_toplamBütce, kulup_lig, stadyum from kulupler where stadyum like '" + aramatxt.Text + "%'", baglanti);
                 DataTable data = new DataTable();
                 sda.Fill(data);
                 Takımlardatagrid.DataSource = data;
@@ -161,9 +147,15 @@ namespace Futbolmenager2
 
         }
 
-        private void güncelbtn_Click(object sender, EventArgs e)
+   
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-          
+            Admin_anasayfa anasayfa = new Admin_anasayfa();
+            anasayfa.Show();
+            this.Hide();
         }
+
+     
     }
 }

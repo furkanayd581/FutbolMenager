@@ -76,7 +76,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // kayıtbutton
             // 
@@ -189,6 +188,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 25;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // kullanıcılbl
             // 
@@ -235,7 +235,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(516, 309);
+            this.label5.Location = new System.Drawing.Point(525, 313);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 36;
@@ -273,7 +273,7 @@
             // kuluphatalbl
             // 
             this.kuluphatalbl.AutoSize = true;
-            this.kuluphatalbl.Location = new System.Drawing.Point(542, 170);
+            this.kuluphatalbl.Location = new System.Drawing.Point(550, 174);
             this.kuluphatalbl.Name = "kuluphatalbl";
             this.kuluphatalbl.Size = new System.Drawing.Size(0, 13);
             this.kuluphatalbl.TabIndex = 40;
@@ -282,7 +282,7 @@
             // 
             this.sifrehatalbl.AutoSize = true;
             this.sifrehatalbl.ForeColor = System.Drawing.Color.Red;
-            this.sifrehatalbl.Location = new System.Drawing.Point(513, 318);
+            this.sifrehatalbl.Location = new System.Drawing.Point(550, 285);
             this.sifrehatalbl.Name = "sifrehatalbl";
             this.sifrehatalbl.Size = new System.Drawing.Size(0, 13);
             this.sifrehatalbl.TabIndex = 41;

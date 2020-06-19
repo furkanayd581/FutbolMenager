@@ -14,13 +14,14 @@ namespace Futbolmenager2
     public partial class Giriş : Form
     {
         public static string gidenbilgi = "";
+        
    
         public Giriş()
         {
             InitializeComponent();
            
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
        
 
         private void Giriş_Load(object sender, EventArgs e)
@@ -131,11 +132,7 @@ namespace Futbolmenager2
 
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Kayıt kayıt = new Kayıt();

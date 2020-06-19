@@ -59,5 +59,11 @@ namespace Futbolmenager2
         {
 
         }
+
+        private void btncikis_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }

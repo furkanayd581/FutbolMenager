@@ -17,7 +17,7 @@ namespace Futbolmenager2
 
         {
             InitializeComponent();
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
 
            
 
@@ -27,7 +27,7 @@ namespace Futbolmenager2
         {
             KullaniciAnasayfa ka = new KullaniciAnasayfa();
             String oyuncular = ka.kullanıcı.ToString();
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from sporcular where sporcu_kulup= (select kullanici_kulup from kullanicilar where kullanici_adi='"+oyuncular.ToString()+"')" , baglanti);
             DataTable sqlVerialma = new DataTable();
@@ -62,7 +62,7 @@ namespace Futbolmenager2
 
             try
             {
-                SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+                SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
                 baglanti.Open();
                 SqlCommand komut2 = new SqlCommand();
                 komut2.Connection = baglanti;
@@ -112,11 +112,12 @@ namespace Futbolmenager2
 
                     baglanti.Close();
                 }
+                baglanti.Open();
+                SqlCommand transfer_durumu = new SqlCommand("update Transferliste set Transfer_satis_durumu=Transfer_satis_durumu+1", baglanti);
+                transfer_durumu.ExecuteNonQuery();
 
 
-
-                //   KullanıcıDatagrid.SelectedRows[0].Cells[0].Value.ToString(),
-              
+                baglanti.Close();
                    
             }
             catch (Exception)
@@ -128,9 +129,11 @@ namespace Futbolmenager2
 
         }
 
-        private void KullanıcıDatagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            KullaniciAnasayfa anasayfa = new KullaniciAnasayfa();
+            anasayfa.Show();
+            this.Hide();
         }
     }
 }

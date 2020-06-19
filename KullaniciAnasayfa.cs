@@ -13,6 +13,8 @@ namespace Futbolmenager2
 {
     public partial class KullaniciAnasayfa : Form
     {
+        string takımaditut;
+        public static string veriyitut;
         public KullaniciAnasayfa()
         {
             InitializeComponent();
@@ -20,9 +22,9 @@ namespace Futbolmenager2
         public string kullanıcı = Giriş.gidenbilgi.ToString();
         private void KullaniciAnasayfa_Load(object sender, EventArgs e)
         {
-            lbltakımadı.Text = Giriş.gidenbilgi.ToString();
+            lblkullaniciadi.Text = Giriş.gidenbilgi.ToString();
             takimcek();
-
+            takımaditut = lblkullaniciadi.Text;
         }
         public string t_amblem;
         
@@ -30,13 +32,13 @@ namespace Futbolmenager2
         public void takimcek ()
         {
 
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
 
             SqlCommand act = new SqlCommand();
             act.Connection = baglanti;
 
-            act.CommandText = "Select*from kulupler where kulup_adi= (select kullanici_kulup from kullanicilar where kullanici_adi='" + lbltakımadı.Text + "')";
-
+            act.CommandText = "Select*from kulupler where kulup_adi= (select kullanici_kulup from kullanicilar where kullanici_adi='" + lblkullaniciadi.Text + "')";
+            
 
             SqlDataReader dr;
             baglanti.Open();
@@ -70,23 +72,14 @@ namespace Futbolmenager2
             this.Hide();
         }
 
-        private void Lbltakımadı_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Btntransfer_Click(object sender, EventArgs e)
         {
-          KullanıcıTransferliste liste = new KullanıcıTransferliste();
-            liste.Show();
-            
 
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-
-        
+           
+            KullanıcıTransferliste veriyigetirTransfer = new KullanıcıTransferliste();
+            this.Hide();
+            veriyigetirTransfer.kullanici_adi = lblkullaniciadi.Text;
+            veriyigetirTransfer.ShowDialog();
         }
     }
 }

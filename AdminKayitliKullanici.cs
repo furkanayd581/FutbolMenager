@@ -17,7 +17,7 @@ namespace Futbolmenager2
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
 
         public void verilerigöster(string veriler)
 
@@ -33,7 +33,7 @@ namespace Futbolmenager2
         private void AdminKayitliKullanici_Load(object sender, EventArgs e)
         {
 
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from kullanicilar", baglanti);
             DataTable sqlVerialma = new DataTable();
@@ -59,7 +59,7 @@ namespace Futbolmenager2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
 
@@ -89,6 +89,13 @@ namespace Futbolmenager2
 
                 textBox1.Text = Adminkayitdatagrid.CurrentRow.Cells[1].FormattedValue.ToString();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Admin_anasayfa anasayfa = new Admin_anasayfa();
+            anasayfa.Show();
+            this.Hide();
         }
     }
 }

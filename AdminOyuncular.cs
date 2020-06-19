@@ -22,7 +22,7 @@ namespace Futbolmenager2
         public void verilerigöster(string veriler)
 
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
             SqlDataAdapter da = new SqlDataAdapter(veriler, baglanti);
@@ -36,7 +36,7 @@ namespace Futbolmenager2
 
         private void AdminOyuncular_Load(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from sporcular", baglanti);
             DataTable sqlVerialma = new DataTable();
@@ -49,7 +49,7 @@ namespace Futbolmenager2
 
         private void aramatxt_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
 
@@ -152,7 +152,7 @@ namespace Futbolmenager2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
 
@@ -191,7 +191,7 @@ namespace Futbolmenager2
         private void button2_Click(object sender, EventArgs e)
         {
 
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
 
@@ -233,6 +233,13 @@ namespace Futbolmenager2
 
 
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Admin_anasayfa anasayfa = new Admin_anasayfa();
+            anasayfa.Show();
+            this.Hide();
         }
     }
 }

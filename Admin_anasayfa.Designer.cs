@@ -37,7 +37,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.admintxt = new System.Windows.Forms.Label();
             this.btnoyuncular = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncikis = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,7 +49,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(12, 58);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(757, 54);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -100,7 +100,7 @@
             // 
             this.btnkayitlikullanici.BackColor = System.Drawing.Color.White;
             this.btnkayitlikullanici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnkayitlikullanici.Location = new System.Drawing.Point(474, 62);
+            this.btnkayitlikullanici.Location = new System.Drawing.Point(473, 62);
             this.btnkayitlikullanici.Name = "btnkayitlikullanici";
             this.btnkayitlikullanici.Size = new System.Drawing.Size(147, 50);
             this.btnkayitlikullanici.TabIndex = 12;
@@ -137,26 +137,26 @@
             this.btnoyuncular.UseVisualStyleBackColor = false;
             this.btnoyuncular.Click += new System.EventHandler(this.Btnoyuncular_Click);
             // 
-            // button1
+            // btncikis
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(618, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 50);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Çıkış Yap";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnkayitlikullanici_Click);
+            this.btncikis.BackColor = System.Drawing.Color.White;
+            this.btncikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncikis.Location = new System.Drawing.Point(617, 62);
+            this.btncikis.Name = "btncikis";
+            this.btncikis.Size = new System.Drawing.Size(152, 50);
+            this.btncikis.TabIndex = 17;
+            this.btncikis.Text = "Çıkış Yap";
+            this.btncikis.UseVisualStyleBackColor = false;
+            this.btncikis.Click += new System.EventHandler(this.btncikis_Click);
             // 
             // Admin_anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btncikis);
             this.Controls.Add(this.admintxt);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnkayitlikullanici);
             this.Controls.Add(this.btntransferliste);
             this.Controls.Add(this.btnoyuncular);
@@ -187,6 +187,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label admintxt;
         private System.Windows.Forms.Button btnoyuncular;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncikis;
     }
 }

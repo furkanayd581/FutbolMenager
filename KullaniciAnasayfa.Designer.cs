@@ -33,8 +33,7 @@
             this.btntransfer = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbltakımadı = new System.Windows.Forms.Label();
-            this.btnacıkarttırma = new System.Windows.Forms.Button();
+            this.lblkullaniciadi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +52,7 @@
             // btnoyuncular
             // 
             this.btnoyuncular.BackColor = System.Drawing.Color.Coral;
-            this.btnoyuncular.Location = new System.Drawing.Point(334, 157);
+            this.btnoyuncular.Location = new System.Drawing.Point(334, 113);
             this.btnoyuncular.Name = "btnoyuncular";
             this.btnoyuncular.Size = new System.Drawing.Size(159, 57);
             this.btnoyuncular.TabIndex = 2;
@@ -64,7 +63,7 @@
             // btntransfer
             // 
             this.btntransfer.BackColor = System.Drawing.Color.Coral;
-            this.btntransfer.Location = new System.Drawing.Point(334, 220);
+            this.btntransfer.Location = new System.Drawing.Point(334, 200);
             this.btntransfer.Name = "btntransfer";
             this.btntransfer.Size = new System.Drawing.Size(159, 57);
             this.btntransfer.TabIndex = 3;
@@ -84,33 +83,22 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox2.Location = new System.Drawing.Point(71, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(58, 58);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 76);
+            this.pictureBox2.Size = new System.Drawing.Size(135, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // lbltakımadı
+            // lblkullaniciadi
             // 
-            this.lbltakımadı.AutoSize = true;
-            this.lbltakımadı.BackColor = System.Drawing.Color.NavajoWhite;
-            this.lbltakımadı.Location = new System.Drawing.Point(59, 157);
-            this.lbltakımadı.Name = "lbltakımadı";
-            this.lbltakımadı.Size = new System.Drawing.Size(35, 13);
-            this.lbltakımadı.TabIndex = 3;
-            this.lbltakımadı.Text = "label1";
-            this.lbltakımadı.Click += new System.EventHandler(this.Lbltakımadı_Click);
-            // 
-            // btnacıkarttırma
-            // 
-            this.btnacıkarttırma.BackColor = System.Drawing.Color.Coral;
-            this.btnacıkarttırma.Location = new System.Drawing.Point(334, 94);
-            this.btnacıkarttırma.Name = "btnacıkarttırma";
-            this.btnacıkarttırma.Size = new System.Drawing.Size(159, 57);
-            this.btnacıkarttırma.TabIndex = 1;
-            this.btnacıkarttırma.Text = "Açık Arttırma";
-            this.btnacıkarttırma.UseVisualStyleBackColor = false;
+            this.lblkullaniciadi.AutoSize = true;
+            this.lblkullaniciadi.BackColor = System.Drawing.Color.NavajoWhite;
+            this.lblkullaniciadi.Location = new System.Drawing.Point(55, 170);
+            this.lblkullaniciadi.Name = "lblkullaniciadi";
+            this.lblkullaniciadi.Size = new System.Drawing.Size(35, 13);
+            this.lblkullaniciadi.TabIndex = 3;
+            this.lblkullaniciadi.Text = "label1";
             // 
             // KullaniciAnasayfa
             // 
@@ -118,10 +106,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LimeGreen;
             this.ClientSize = new System.Drawing.Size(787, 339);
-            this.Controls.Add(this.lbltakımadı);
+            this.Controls.Add(this.lblkullaniciadi);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnacıkarttırma);
             this.Controls.Add(this.btntransfer);
             this.Controls.Add(this.btnoyuncular);
             this.Controls.Add(this.btnTakım);
@@ -142,7 +129,6 @@
         private System.Windows.Forms.Button btntransfer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lbltakımadı;
-        private System.Windows.Forms.Button btnacıkarttırma;
+        private System.Windows.Forms.Label lblkullaniciadi;
     }
 }

@@ -56,18 +56,20 @@
             this.aramatxt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Takımlardatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Takımlardatagrid
             // 
             this.Takımlardatagrid.BackgroundColor = System.Drawing.Color.Coral;
             this.Takımlardatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Takımlardatagrid.Location = new System.Drawing.Point(1, 251);
+            this.Takımlardatagrid.Location = new System.Drawing.Point(1, 292);
             this.Takımlardatagrid.Name = "Takımlardatagrid";
             this.Takımlardatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Takımlardatagrid.Size = new System.Drawing.Size(802, 128);
+            this.Takımlardatagrid.Size = new System.Drawing.Size(802, 112);
             this.Takımlardatagrid.TabIndex = 0;
             this.Takımlardatagrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Takımlardatagrid_CellDoubleClick);
             // 
@@ -85,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 15);
+            this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 4;
@@ -93,35 +95,35 @@
             // 
             // kulupaditxt
             // 
-            this.kulupaditxt.Location = new System.Drawing.Point(74, 12);
+            this.kulupaditxt.Location = new System.Drawing.Point(74, 69);
             this.kulupaditxt.Name = "kulupaditxt";
             this.kulupaditxt.Size = new System.Drawing.Size(100, 20);
             this.kulupaditxt.TabIndex = 5;
             // 
             // kuluptarihtxt
             // 
-            this.kuluptarihtxt.Location = new System.Drawing.Point(74, 46);
+            this.kuluptarihtxt.Location = new System.Drawing.Point(74, 102);
             this.kuluptarihtxt.Name = "kuluptarihtxt";
             this.kuluptarihtxt.Size = new System.Drawing.Size(100, 20);
             this.kuluptarihtxt.TabIndex = 6;
             // 
             // kulupsampiyonluktxt
             // 
-            this.kulupsampiyonluktxt.Location = new System.Drawing.Point(74, 121);
+            this.kulupsampiyonluktxt.Location = new System.Drawing.Point(74, 168);
             this.kulupsampiyonluktxt.Name = "kulupsampiyonluktxt";
             this.kulupsampiyonluktxt.Size = new System.Drawing.Size(100, 20);
             this.kulupsampiyonluktxt.TabIndex = 8;
             // 
             // kulupdegertxt
             // 
-            this.kulupdegertxt.Location = new System.Drawing.Point(74, 153);
+            this.kulupdegertxt.Location = new System.Drawing.Point(74, 203);
             this.kulupdegertxt.Name = "kulupdegertxt";
             this.kulupdegertxt.Size = new System.Drawing.Size(100, 20);
             this.kulupdegertxt.TabIndex = 9;
             // 
             // kulupligtxt
             // 
-            this.kulupligtxt.Location = new System.Drawing.Point(74, 187);
+            this.kulupligtxt.Location = new System.Drawing.Point(74, 237);
             this.kulupligtxt.Name = "kulupligtxt";
             this.kulupligtxt.Size = new System.Drawing.Size(100, 20);
             this.kulupligtxt.TabIndex = 10;
@@ -129,7 +131,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 49);
+            this.label3.Location = new System.Drawing.Point(-3, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 11;
@@ -138,7 +140,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-2, 121);
+            this.label5.Location = new System.Drawing.Point(-2, 171);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 13;
@@ -147,7 +149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-1, 153);
+            this.label6.Location = new System.Drawing.Point(-3, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
             this.label6.TabIndex = 14;
@@ -156,7 +158,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 187);
+            this.label7.Location = new System.Drawing.Point(-1, 240);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(27, 13);
             this.label7.TabIndex = 15;
@@ -185,7 +187,7 @@
             // 
             // resimekletxt
             // 
-            this.resimekletxt.Location = new System.Drawing.Point(74, 85);
+            this.resimekletxt.Location = new System.Drawing.Point(74, 137);
             this.resimekletxt.Name = "resimekletxt";
             this.resimekletxt.Size = new System.Drawing.Size(100, 20);
             this.resimekletxt.TabIndex = 7;
@@ -193,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 85);
+            this.label4.Location = new System.Drawing.Point(-1, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 12;
@@ -201,7 +203,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(180, 85);
+            this.button2.Location = new System.Drawing.Point(180, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(36, 21);
             this.button2.TabIndex = 18;
@@ -225,7 +227,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-1, 220);
+            this.label1.Location = new System.Drawing.Point(-1, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 20;
@@ -233,7 +235,7 @@
             // 
             // stadyumtxt
             // 
-            this.stadyumtxt.Location = new System.Drawing.Point(74, 217);
+            this.stadyumtxt.Location = new System.Drawing.Point(74, 266);
             this.stadyumtxt.Name = "stadyumtxt";
             this.stadyumtxt.Size = new System.Drawing.Size(100, 20);
             this.stadyumtxt.TabIndex = 21;
@@ -285,12 +287,24 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 25;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(14, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // AdminTakımlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(804, 376);
+            this.ClientSize = new System.Drawing.Size(813, 416);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.aramatxt);
@@ -317,9 +331,10 @@
             this.Controls.Add(this.Takımlardatagrid);
             this.Name = "AdminTakımlar";
             this.Text = "AdminTakımlar";
-            this.Load += new System.EventHandler(this.AdminTakımlar_Load);
+//            this.Load += new System.EventHandler(this.AdminTakımlar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Takımlardatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +368,6 @@
         private System.Windows.Forms.TextBox aramatxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -181,7 +181,7 @@
             // girishatalbl
             // 
             this.girishatalbl.AutoSize = true;
-            this.girishatalbl.Location = new System.Drawing.Point(484, 215);
+            this.girishatalbl.Location = new System.Drawing.Point(509, 215);
             this.girishatalbl.Name = "girishatalbl";
             this.girishatalbl.Size = new System.Drawing.Size(0, 13);
             this.girishatalbl.TabIndex = 11;

@@ -28,7 +28,7 @@ namespace Futbolmenager2
       
         private void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             
             SqlCommand act = new SqlCommand();
             act.Connection = baglanti;
@@ -43,15 +43,19 @@ namespace Futbolmenager2
             while (dr.Read())
             {
                 sifre = dr["kullanici_sifre"].ToString();
+                
             }
-            
 
-           
+
+
+
+
+
             SmtpClient sc = new SmtpClient();
             sc.Port = 587;
             sc.Host = "smtp.gmail.com";
             sc.EnableSsl = true;
-
+            sc.DeliveryMethod = SmtpDeliveryMethod.Network;
             sc.Credentials = new NetworkCredential("info.footballmenager@gmail.com", "b6948e79");
             MailMessage mail = new MailMessage();
 
@@ -60,8 +64,16 @@ namespace Futbolmenager2
             mail.To.Add(sifremiunuttumtxt.Text);
             mail.Subject = "FM şifre bildirimi";
             mail.IsBodyHtml = true;
-            mail.Body = "Şifreniz" +sifre + " dır. ";
+            mail.Body = "Şifreniz" + sifre + " dır. ";
             sc.Send(mail);
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Giriş grş = new Giriş();
+            grş.Show();
+            this.Hide();
         }
     }
 }

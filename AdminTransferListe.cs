@@ -17,10 +17,10 @@ namespace Futbolmenager2
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
 
 
@@ -103,7 +103,7 @@ namespace Futbolmenager2
         {
             KullaniciAnasayfa ka = new KullaniciAnasayfa();
             String oyuncular = ka.kullanıcı.ToString();
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from Transferliste", baglanti);
             DataTable sqlVerialma = new DataTable();
@@ -113,7 +113,46 @@ namespace Futbolmenager2
             baglanti.Close();
         }
 
-       
+        public void admintransferlistecekme()
+        {
+            KullaniciAnasayfa ka = new KullaniciAnasayfa();
+            String oyuncular = ka.kullanıcı.ToString();
+            baglanti.Open();
+
+            SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select * from Transferliste", baglanti);
+            DataTable sqlVerialma = new DataTable();
+
+            sqlvericekme.Fill(sqlVerialma);
+            admintrnsferdtagrid.DataSource = sqlVerialma;
+            baglanti.Close();
+
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Admin_anasayfa anasayfa = new Admin_anasayfa();
+            anasayfa.Show();
+            this.Hide();
+        }
+        public string trnsfr;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("delete from Transferliste where sporcu_ID=@sporcu_id", baglanti);
+            komut.Parameters.AddWithValue("@sporcu_id", trnsfr);
+            komut.ExecuteNonQuery();
+            komut.Parameters.Clear();
+            baglanti.Close();
+            admintransferlistecekme();
+
+
+        }
+
+        private void admintrnsferdtagrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            trnsfr= admintrnsferdtagrid.CurrentRow.Cells[12].FormattedValue.ToString();
+        }
     }
 }
 

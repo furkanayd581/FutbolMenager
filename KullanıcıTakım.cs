@@ -16,14 +16,14 @@ namespace Futbolmenager2
         public KullanıcıTakım()
         {
             InitializeComponent();
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
         }
 
         private void KullanıcıTakım_Load(object sender, EventArgs e)
         {
             KullaniciAnasayfa ka = new KullaniciAnasayfa();
             String takım = ka.kullanıcı.ToString();
-            SqlConnection baglanti = new SqlConnection("Data Source=TARIK\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection("Data Source=Furkan\\SQLEXPRESS;Initial Catalog=Transfer;Integrated Security=True");
             baglanti.Open();
             SqlDataAdapter sqlvericekme = new SqlDataAdapter("Select*from kulupler where kulup_adi= (select kullanici_kulup from kullanicilar where kullanici_adi='" + takım.ToString() + "')", baglanti);
             DataTable sqlVerialma = new DataTable();
@@ -31,6 +31,13 @@ namespace Futbolmenager2
             Takımdatagridview.DataSource = sqlVerialma;
             baglanti.Close();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            KullaniciAnasayfa anasayfa = new KullaniciAnasayfa();
+            anasayfa.Show();
+            this.Hide();
         }
     }
 }
